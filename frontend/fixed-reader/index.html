@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCF Global CS Conference Best Paper Awards</title>
+  <link rel="icon" href="data:,">
+  <style>%%CSS%%</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell brand">
+      <a class="brand-link" href="#overview"><span class="brand-icon" aria-hidden="true">▤</span><span><strong>CCF Global CS Conference Best Paper Awards</strong><small data-i18n>中国计算机学会A/B类会议最佳论文获奖资料库</small></span></a>
+      <div class="languages" aria-label="Language"><button type="button" data-lang="zh" aria-pressed="true">中文</button><button type="button" data-lang="en" aria-pressed="false">English</button></div>
+    </div>
+    <nav class="shell navigation" aria-label="主导航" data-i18n-aria>
+      <a href="#overview" aria-current="page" data-i18n>论文总览</a>
+      <a href="#events" data-i18n>会议年度奖项</a>
+      <a href="#search" data-i18n>论文检索</a>
+    </nav>
+  </header>
+  <main class="shell">
+    <section id="overview" aria-labelledby="overview-heading">
+      <div class="heading"><div><h1 id="overview-heading" data-i18n>论文总览</h1><p data-i18n>按会议、年份、奖项筛选获奖论文。</p></div><p class="publication"><span data-i18n>数据更新</span> <time datetime="%%DATE%%">%%DATE%%</time></p></div>
+      <div class="panel">
+        <form class="filters" data-filters="overview">
+          <label class="field paper-search" for="overview-query">
+            <span data-i18n>搜索论文</span>
+            <input id="overview-query" name="query" type="search" autocomplete="off" placeholder="输入论文题名、作者、单位或奖项" data-i18n-placeholder>
+          </label>
+          <div class="field wide">
+            <label for="conference-query" data-i18n>会议（可多选）</label>
+            <input id="conference-query" name="conference_query" type="search" autocomplete="off" placeholder="输入会议简称，可点选多个" data-i18n-placeholder>
+            <div id="conference-matches" class="conference-matches" aria-live="polite" hidden></div>
+            <div id="selected-conferences" class="chips" aria-live="polite"></div>
+          </div>
+          %%OVERVIEW_FIELDS%%
+        </form>
+        <div class="toolbar"><div class="results"><strong id="overview-count" role="status">%%OVERVIEW_COUNT%%</strong><span id="overview-scope">%%OVERVIEW_SCOPE%%</span></div><div class="actions"><label class="tick"><input type="checkbox" data-expand><span data-i18n>展开长文本</span></label><button type="button" data-export="overview" data-i18n>导出筛选结果 CSV</button></div></div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="论文总览" data-i18n-aria><table>%%PAPER_COLS%%<thead>%%PAPER_HEAD%%</thead><tbody id="overview-rows">%%FIRST_PAPERS%%</tbody></table></div>
+        %%OVERVIEW_PAGER%%
+      </div>
+    </section>
+    <section id="events" aria-labelledby="events-heading" hidden>
+      <div class="heading"><div><h1 id="events-heading" data-i18n>会议年度奖项</h1><p data-i18n>按会议和年份浏览奖项与已收录的获奖论文。</p></div><p class="publication"><span data-i18n>数据更新</span> <time datetime="%%DATE%%">%%DATE%%</time></p></div>
+      <div class="panel">
+        <form class="filters" data-filters="events">%%EVENT_FIELDS%%</form>
+        <div class="toolbar"><strong id="events-count" role="status"></strong></div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="会议年度奖项" data-i18n-aria><table class="event-table"><thead>%%EVENT_HEAD%%</thead><tbody id="events-rows"></tbody></table></div>
+        %%EVENT_PAGER%%
+      </div>
+    </section>
+    <section id="search" aria-labelledby="search-heading" hidden>
+      <div class="heading"><div><h1 id="search-heading" data-i18n>论文检索</h1><p data-i18n>按题名、作者、单位和发表日期检索。</p></div></div>
+      <div class="panel">
+        <form class="filters" data-filters="search">%%SEARCH_FIELDS%%</form>
+        <div class="toolbar"><strong id="search-count" role="status"></strong><button type="button" data-export="search" data-i18n>导出筛选结果 CSV</button></div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="论文检索" data-i18n-aria><table>%%PAPER_COLS%%<thead>%%PAPER_HEAD%%</thead><tbody id="search-rows"></tbody></table></div>
+        %%SEARCH_PAGER%%
+      </div>
+    </section>
+    <noscript><p>启用 JavaScript 后可在本页筛选、翻页和查看详情。 Enable JavaScript to filter, browse and view details.</p></noscript>
+    <p id="status-message" class="sr-only" role="status"></p>
+  </main>
+  <footer class="shell footer">
+    <div class="footer-top"><span>CCF Global CS Conference Best Paper Awards</span><span data-i18n>保留原始奖项与来源 · 数据由本地审核后发布</span></div>
+    <div class="acknowledgements">
+      <strong data-i18n>致谢</strong>
+      <a href="https://www.hnust.edu.cn/" target="_blank" rel="noopener noreferrer"><img src="%%UNIVERSITY%%" width="210" height="49" loading="lazy" alt="湖南科技大学" data-i18n-alt></a>
+      <a class="college" href="https://computer.hnust.edu.cn/" target="_blank" rel="noopener noreferrer"><img src="%%COLLEGE%%" width="788" height="84" loading="lazy" alt="湖南科技大学计算机科学与工程学院" data-i18n-alt></a>
+      <div class="lab"><strong data-i18n>服务计算与软件服务新技术</strong><small data-i18n>湖南省重点实验室</small></div>
+    </div>
+    <div class="teachers"><strong data-i18n>特别致谢</strong><a href="https://faculty.hnust.edu.cn/pubtphp/jsjkxygcxy/1050037/chinese/index.html" target="_blank" rel="noopener noreferrer" data-i18n>刘建勋</a><a href="https://faculty.hnust.edu.cn/pubtphp/jsjkxygcxy/1050148/chinese/index.html" target="_blank" rel="noopener noreferrer" data-i18n>王焕宇</a><a href="https://faculty.hnust.edu.cn/pubtphp/jsjkxygcxy/1050135/chinese/index.html" target="_blank" rel="noopener noreferrer" data-i18n>黄晶</a></div>
+  </footer>
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="detail-head"><h2 id="detail-title" data-i18n>详情</h2><form method="dialog"><button autofocus data-i18n>关闭</button></form></div>
+    <div id="detail-body"></div>
+  </dialog>
+  <script id="reader-data" type="application/json">%%DATA%%</script>
+  <script>%%JS%%</script>
+</body>
+</html>

@@ -24,6 +24,14 @@ test('keywords match case-insensitively across title, authors, units and origina
   assert.equal(overviewRows(rows, { query: 'not present' }).length, 0)
 })
 
+test('paper keywords and conference filters use separate fields', () => {
+  const example = [...rows, { ...rows[3], id: 'e', title: 'An ACL Study' }]
+  assert.deepEqual(overviewRows(example, { query: 'acl' }).map(row => row.id), ['e'])
+  assert.deepEqual(overviewRows(example, { conferences: ['ACL'] }).map(row => row.id), ['c'])
+  assert.equal(overviewRows(example, { conferences: ['ACL'], query: 'acl' }).length, 0)
+  assert.equal(overviewRows(example, { query: '2025' }).length, 0)
+})
+
 test('sorting is deterministic and retains multiple awards for a paper', () => {
   assert.deepEqual(overviewRows([...rows].reverse()).map(r => r.id), ['b', 'a', 'c', 'd'])
   assert.deepEqual(overviewRows(rows, {}, 'title').map(r => r.id), ['d', 'c', 'b', 'a'])

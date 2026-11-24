@@ -10,7 +10,7 @@ The navigation order is **Paper overview → Annual conference awards → Paper 
 
 ## Find papers
 
-**Paper overview** provides a compact table with multiple-conference selection, instant keyword filters and sorting. It initially shows 10 papers per page. **Paper search** combines conference, CCF tier, award category, year, title, author, affiliation and publication-date filters; it initially shows 5 papers per page.
+**Paper overview** provides a compact table with multiple-conference selection, instant keyword filters and sorting. **Paper search** combines conference, CCF tier, award category, year, title, author, affiliation and publication-date filters. Both views initially show 20 papers per page.
 
 Both views offer page sizes of 5, 10, 15, 20, 30 and 50, with direct page-number entry. One row represents one paper; multiple awards and sources are combined. Identically titled papers from different conferences or years remain separate.
 

@@ -16,13 +16,13 @@ cd ..
 python -m http.server 8080 --directory frontend/dist
 ```
 
-Visit `http://127.0.0.1:8080/`. Upload the complete `frontend/dist/` directory to any static web server for deployment, including its `assets/` directory. `npm run preview` also serves a built site locally.
+Visit `http://127.0.0.1:8080/` or open `frontend/dist/index.html` directly. Deploy the homepage and `assets/fixed-*` files to a static web server, keeping their relative paths.
 
 ## Updating data
 
-Replace the reviewed, versioned `data/exports/public-data.json` through the maintenance workflow, then rebuild and publish the complete output. The build verifies the paper count and refuses unverified input. It generates a compact compressed search index and separate evidence and annual-award detail files. Files have content-based names for browser caching; the HTML selects one consistent release.
+Replace the reviewed, versioned `data/exports/public-data.json` through the maintenance workflow, then rebuild and publish the output. The build verifies the paper count and refuses unverified input. The homepage contains the first paper rows, the search index, and the annual award list. Evidence and award details load on demand from versioned static files.
 
-Filtering, sorting, pagination and CSV generation run in the browser. Switching views reuses the loaded index. Details load only when opened. The refresh-data button reloads the published snapshot.
+Filtering, sorting, pagination and CSV generation run in the browser. Switching views reuses the embedded index. Reload the page to open a newer published snapshot.
 
 The initial language is Chinese. The upper-right language control switches immediately and persists the choice in browser storage. `?lang=en` or `?lang=zh` explicitly selects a language.
 

@@ -4,7 +4,9 @@
 
 An index of award-winning papers from **China Computer Federation (CCF) A/B conferences**, with original award names and verifiable sources.
 
-**[Browse the website](http://47.107.172.42/?lang=en)** · [中文网站](http://47.107.172.42/?lang=zh)
+**[Browse the website](http://47.107.172.42/?lang=en)** · [中文网站](http://47.107.172.42/?lang=zh) · [Download the offline website](https://github.com/peekabooXT/CCF-Global-CS-Conference-Best-Paper-Awards/releases/latest)
+
+To browse offline, extract `CCF-Global-CS-Conference-Best-Paper-Awards-Static.zip` and open `index.html` in your browser.
 
 The website opens in Chinese for new visitors. Use **中文 | English** in the upper-right corner to switch languages. Your choice is remembered by the browser. The interface language does not change paper titles, author names, original award names, evidence or the underlying records.
 
@@ -12,13 +14,13 @@ The website opens in Chinese for new visitors. Use **中文 | English** in the u
 
 The default page is **Paper overview**, followed by **Annual conference awards** and **Paper search**.
 
-- **Paper overview:** compact tables, multiple conference selection, instant keyword filtering and sorting. The default page size is 10.
+- **Paper overview:** compact tables, multiple conference selection, instant keyword filtering and sorting. The default page size is 20.
 - **Annual conference awards:** awards and indexed winning papers grouped by conference and year.
-- **Paper search:** combine conference, CCF tier, award category, year, title, author, affiliation and publication-date filters. The default page size is 5.
+- **Paper search:** combine conference, CCF tier, award category, year, title, author, affiliation and publication-date filters. The default page size is 20.
 
 Both paper views support page sizes of 5, 10, 15, 20, 30 and 50. CSV exports include all filtered results, not just the current page; interface headers follow the selected language.
 
-The website uses a static snapshot generated at publication time. Browsing and filtering reuse a compressed index in the browser; evidence and award details load as separate static files when opened. Visitors do not wait for a server-side database query on each search or page change.
+The website is generated from the reviewed snapshot at publication time. The homepage contains the first 20 papers and the search index. Filtering runs as you type, with matching text highlighted in orange. Evidence and award details load from static files when opened.
 
 You can also browse the versioned Markdown indices. These retain original-language bibliographic metadata and source links:
 
@@ -46,7 +48,7 @@ This site does not host, mirror or distribute paper attachments. Titles link to 
 - [Run the viewer locally](docs/RUNNING.md) · [中文运行说明](docs/RUNNING.zh-CN.md)
 - [Reviewed data snapshot](data/exports/public-data.json) · [Publication manifest](data/exports/publication.json)
 
-This repository contains reviewed data, Markdown indices and a read-only viewer built with Python, SQLite and Vue. Collection, model calls, review administration and research experiments belong to the private maintainer repository.
+This repository contains reviewed data, Markdown indices, the static website source, and a read-only Python and SQLite API.
 
 ## Corrections and contributions
 

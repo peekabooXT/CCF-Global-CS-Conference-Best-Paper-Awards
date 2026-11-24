@@ -31,7 +31,7 @@ export function overviewRows(records, filters = {}, sort = 'conference') {
     if (filters.status === 'active' && record.status === 'rejected') return false
     if (filters.year_from != null && record.year < filters.year_from) return false
     if (filters.year_to != null && record.year > filters.year_to) return false
-    const text = fold([record.title, record.acronym, record.year, record.award_name,
+    const text = fold([record.title, record.award_name,
       record.category_label, authorText(record), affiliationText(record)].join(' '))
     return words.every(word => text.includes(word))
   })
