@@ -49,7 +49,7 @@ CCF Global CS Conference Best Paper Awards 整理计算机领域会议的获奖�
 
 ## 反馈与补充
 
-如果发现数据错误、遗漏或其他问题，请联系作者邮箱：[peekaboocatx@gmail.com](mailto:peekaboocatx@gmail.com)。如能附上相关论文、会议、年份及来源链接，将有助于核对和修正。
+如果发现数据错误、遗漏或其他问题，请联系作者邮箱：[xt_cat@mail.hnust.edu.cn](mailto:xt_cat@mail.hnust.edu.cn)。如能附上相关论文、会议、年份及来源链接，将有助于核对和修正。
 
 
 欢迎通过 [Issues](https://github.com/peekabooXT/CCF-Global-CS-Conference-Best-Paper-Awards/issues) 提交缺失论文、信息更正和使用建议。补充数据时，请附上会议名称、获奖年份、论文题名及官方来源链接，便于核对。
